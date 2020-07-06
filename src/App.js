@@ -1,25 +1,26 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import 'bulma/css/bulma.css'
 import { Section } from 'bloomer'
 import Header from './components/Header'
 import SearchForm from './components/SearchForm'
-import Result from './components/Result'
+import ResultList from './components/ResultList'
+import { CardsProvider } from './contexts/Cards'
 
 
 function App() {
+
   return (
-    <div className="App">
-      <Header headerText="Hello World!" />
-      <Section>
-        <SearchForm />
-      </Section>
-      <Section>
-        <Result />
-        <Result />
-        <Result />
-        <Result />
-      </Section>
-    </div>
+    <CardsProvider>
+      <div className="App">
+        <Header headerText="Hello World!" />
+        <Section>
+          <SearchForm />
+        </Section>
+        <Section>
+          <ResultList />
+        </Section>
+      </div>
+    </CardsProvider>
   )
 }
 
