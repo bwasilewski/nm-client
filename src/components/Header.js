@@ -1,11 +1,11 @@
 import React from 'react'
-import { Section } from 'bloomer'
+import { Section, Title } from 'bloomer'
 
 
 const Header =({ headerText }) => (
   <header className="App-header">
     <Section>
-      <h1>{ headerText }</h1> 
+      <Title isSize="1">{ headerText }</Title> 
     </Section>
   </header>
 )
