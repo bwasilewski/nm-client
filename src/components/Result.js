@@ -1,9 +1,22 @@
 import React from 'react'
-import { Box } from 'bloomer'
+import { Box, Table } from 'bloomer'
 
-const Result = () => (
+const Result = ({ card }) => (
   <Box>
-    <p>This is a result!</p>
+    <Table isBordered isFullWidth>
+      <thead>
+        <tr>
+          <td>Name</td>
+          <td>ID</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{card.name}</td>
+          <td>{card.id}</td>
+        </tr>
+      </tbody>
+    </Table>
   </Box>
 )
 
